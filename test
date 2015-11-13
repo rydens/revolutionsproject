@@ -1,6 +1,8 @@
 #!/usr/bin/env python3
 import colors as c
+import time as t
 
-print(c.multi + 'Hello')
-
+while True:
+    print(c.multi('hello') + c.clear)
+    t.sleep(.5)
 
