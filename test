@@ -3,6 +3,6 @@ import colors as c
 import time as t
 
 while True:
-    print(c.multi('hello') + c.clear)
-    t.sleep(.5)
-
+    print(c.multi('hello'))
+    t.sleep(.2)
+    print(c.clear)
