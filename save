@@ -8,5 +8,5 @@ fi
 git pull
 git add -A .
 git commit -a -m "$comment"
-git push
+git push origin master
 espeak "everything is saved."
