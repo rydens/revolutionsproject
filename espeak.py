@@ -7,4 +7,4 @@ def say(text=None,voice=None):
     voice = " -v " + voice
   else:
     voice = ""
-  sp.call("espeak" + voice + text, shell=True
+  sp.call("espeak" + voice + text, shell=True)
