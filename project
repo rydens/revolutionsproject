@@ -1,0 +1,9 @@
+#!/usr/bin/env python3
+import time as t
+import colors as c
+import random as r
+import espeak as e
+import RPi.GPIO as GPIO
+
+lightpins = []
+
