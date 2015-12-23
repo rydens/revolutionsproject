@@ -6,31 +6,79 @@ import espeak as e
 import RPi.GPIO as GPIO
 
  
-lightpins = [4,17,27,5,6,13,22,19,26,18,24]
+lightpins = [4,17,27,5,6,13,22,26,23,19,18,24]
 bpins = [25,12,16,20,21]
 gpins = [4,17,27]
 rpins = [5,6,13]
-cpins = [22,19,26,18,24]
+cpins = [22,26,23,19,18,24]
 score = 0
 
 GPIO.setmode(GPIO.BCM)
 GPIO.setup(lightpins, GPIO.OUT)
 GPIO.setup(bpins, GPIO.IN)
 
-def blink():
-    for pin in lightpins:
-        GPIO.output(pin, 1)
-        t.sleep(.1)
-        
+def help():
+    (c.clear + c.green + '''
+Welcome to the Help page! Time to learn about the commands. "help" just brings you to this page.
+When you use the command "quiz" from the main menu, you start the Quiz Game. If you use the command
+"learn" from the main menu, you will open the program that teaches you about the French Revolution.
+Type "list" to show a list of commands you can use. NOTE: All commands are lowercase.
+Type "exit" when you are finished.''')
+    help = input(c.green + '> ' + c.yellow)
+    if help == 'exit':
+        mainmenu()
+
+def mainmenu():
+    print(c.green + '''
+Welcome to the main menu! You have 4 options: "help", "quiz", "learn", and "list".
+Type "help" to learn about the commands, and "exit" to close the program.''')
+
+def loading():
+    for count in range(3):
+        print(c.clear + c.magenta + 'Loading |')
+        t.sleep(.3)
+        print(c.clear + c.magenta + 'Loading /')
+        t.sleep(.3)
+        print(c.clear + c.magenta + 'Loading -')
+        t.sleep(.3)
+        print(c.clear + c.magenta + 'Loading \\')
+        t.sleep(.3)
+
+print(c.clear + c.green + '''
+Hello! Welcome to Ryan Densmore's Quiz game on the French Revolution!
+Opening...''')
+t.sleep(6)
+loading()
+print(c.clear)
+mainmenu()
 
 while True:
-    if GPIO.input(25) == False:
-        blink()
-    if GPIO.input(12) == False:
-        GPIO.output(lightpins,0)
-    if GPIO.input(16) == False:
-        GPIO.output(gpins,1)
-    if GPIO.input(20) == False:
-        GPIO.output(rpins,1)
-    if GPIO.input(21) == False:
-        GPIO.output(cpins,1)
+    main = input(c.green + '> ' + c.yellow)
+    if main == 'help':
+        print(c.green + '''
+        Welcome to the Help page! Time to learn about the commands. "help" just brings you to this page.
+        When you use the command "quiz" from the main menu, you start the Quiz Game. If you use the command
+        "learn" from the main menu, you will open the program that teaches you about the French Revolution.
+        Type "list" to show a list of commands you can use. "exit" does differrent things, usually said on the welcome text.
+        "clear" clears the screen so it doesn't look so messy. NOTE: All commands are lowercase.''')
+        mainmenu()    
+    elif main == 'quiz':
+        print('yay')
+    elif main == 'learn':
+        print('yay')
+    elif main == 'list':
+        print(c.green + '''
+    The commands you can currently run are:
+    - help
+    - quiz
+    - learn
+    - list
+    - exit
+    - clear''')
+    elif main == 'exit':
+        exit()
+    elif main == 'clear':
+        print(c.clear)
+        mainmenu()
+    else:
+        print(c.red + 'Invalid Command!')
