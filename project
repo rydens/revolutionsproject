@@ -5,5 +5,32 @@ import random as r
 import espeak as e
 import RPi.GPIO as GPIO
 
-lightpins = []
+ 
+lightpins = [4,17,27,5,6,13,22,19,26,18,24]
+bpins = [25,12,16,20,21]
+gpins = [4,17,27]
+rpins = [5,6,13]
+cpins = [22,19,26,18,24]
+score = 0
 
+GPIO.setmode(GPIO.BCM)
+GPIO.setup(lightpins, GPIO.OUT)
+GPIO.setup(bpins, GPIO.IN)
+
+def blink():
+    for pin in lightpins:
+        GPIO.output(pin, 1)
+        t.sleep(.1)
+        
+
+while True:
+    if GPIO.input(25) == False:
+        blink()
+    if GPIO.input(12) == False:
+        GPIO.output(lightpins,0)
+    if GPIO.input(16) == False:
+        GPIO.output(gpins,1)
+    if GPIO.input(20) == False:
+        GPIO.output(rpins,1)
+    if GPIO.input(21) == False:
+        GPIO.output(cpins,1)
