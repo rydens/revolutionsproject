@@ -46,13 +46,14 @@ def loading():
 
 def learnwelcome():
     print(c.green + '''
-    Welcome to the Learn page! Time to learn about the French Revolution.''')
+    Welcome to the Learn page! Time to learn about the French Revolution.
+    Type "help" to learn about the commands.''')
 
 
 print(c.clear + c.green + '''
 Hello! Welcome to Ryan Densmore's Quiz game on the French Revolution!
 Opening...''')
-t.sleep(6)
+t.sleep(6.5)
 loading()
 print(c.clear)
 mainmenu()
@@ -76,23 +77,67 @@ while True:
         learnwelcome()
         while True:
             learn = input(c.green + '> ' + c.yellow)
+
             if learn == 'help':
                 print(c.green + '''
-        Welcome to the Help page! Time to learn about the commands. "help" brings you to this page. When you
-        use the command "list", you can see all of the commands you can currently run. Typing "exit" exits the program.
-        Some more commands:    "summary" - a summary of the French Revolution    "dates" - Major dates of the French Revolution
-        "events" - events of the revolution    "timeline" - a timeline of the revolution   "people" - major people of the revolution
-        "inventions" - some new inventions that were made during the revoulution
+    Welcome to the Help page! Time to learn about the commands. "help" brings you to this page. When you
+    use the command "list", you can see all of the commands you can currently run. Typing "exit" exits the program, and "clear"
+    cleans up the screen. Some more commands:    "summary" - a summary of the French Revolution    "dates" - Major dates of the 
+    French Revolution    "events" - events of the revolution    "timeline" - a timeline of the revolution    "people" - major people 
+    of the revolution    "inventions" - some new inventions that were made during the revoulution.    Using the command "quiz" tells
+    you how to start the quiz game, when you are ready. NOTE: All commands are lowercase.''')
+
+            elif learn == 'list':
+                print(c.green + '''
+    The commands you can currently run are:
+    - help
+    - list
+    - exit
+    - clear
+    - summary
+    - dates
+    - events
+    - timeline
+    - people
+    - inventions
+    - quiz''')
+            elif learn == 'exit':
+                exit()
+           
+            elif learn == 'clear':
+                print(c.clear)
+                learnwelcome()
+
+            elif learn == 'summary':
+                print('yay')
+
+            elif learn == 'dates':
+                print('yay')
+
+            elif learn == 'events':
+                print('yay')
+
+            elif learn == 'timeline':
+                print('yay')
+   
+            elif learn == 'people':
+                print('yay')
+
+            elif learn == 'inventions':
+                print('yay')
+ 
+            elif learn == 'quiz':
+               print(c.green + 'To start the Quiz game, please restart the program by typing "exit" then "./project".')
 
     elif main == 'list':
-        print(c.green + '
+        print(c.green + '''
     The commands you can currently run are:
     - help
     - quiz
     - learn
     - list
     - exit
-    - clear')
+    - clear''')
 
     elif main == 'exit':
         exit()
@@ -100,3 +145,6 @@ while True:
     elif main == 'clear':
         print(c.clear)
         mainmenu()
+
+    else:
+        print(c.red + 'Invalid Command! Try "list".')
