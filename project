@@ -80,8 +80,8 @@ while True:
                 print(c.green + '''
         Welcome to the Help page! Time to learn about the commands. "help" brings you to this page. When you
         use the command "list", you can see all of the commands you can currently run. Typing "exit" exits the program.
-        Some more commands:    "summary" - a summary of the French Revolution    "dates" - Major dates of the French Revoulution
-        "events" - events of the revolution    "timeline" - a timeline of the revoulution    
+        Some more commands:    "summary" - a summary of the French Revolution    "dates" - Major dates of the French Revolution
+        "events" - events of the revolution    "timeline" - a timeline of the revolution   
 
     elif main == 'list':
         print(c.green + '''
