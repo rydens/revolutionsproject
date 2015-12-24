@@ -44,6 +44,11 @@ def loading():
         print(c.clear + c.magenta + 'Loading \\')
         t.sleep(.3)
 
+def learnwelcome():
+    print(c.green + '''
+    Welcome to the Learn page! Time to learn about the French Revolution.''')
+
+
 print(c.clear + c.green + '''
 Hello! Welcome to Ryan Densmore's Quiz game on the French Revolution!
 Opening...''')
@@ -62,10 +67,22 @@ while True:
         Type "list" to show a list of commands you can use. "exit" does differrent things, usually said on the welcome text.
         "clear" clears the screen so it doesn't look so messy. NOTE: All commands are lowercase.''')
         mainmenu()    
+
     elif main == 'quiz':
-        print('yay')
+        print(c.green + 'Welcome to the Quiz Game! Before you play, make sure you have learned about the French Revolution!')
+
     elif main == 'learn':
-        print('yay')
+        print(c.clear)
+        learnwelcome()
+        while True:
+            learn = input(c.green + '> ' + c.yellow)
+            if learn == 'help':
+                print(c.green + '''
+        Welcome to the Help page! Time to learn about the commands. "help" brings you to this page. When you
+        use the command "list", you can see all of the commands you can currently run. Typing "exit" exits the program.
+        Some more commands:    "summary" - a summary of the French Revolution    "dates" - Major dates of the French Revoulution
+        "events" - events of the revolution    "timeline" - a timeline of the revoulution    
+
     elif main == 'list':
         print(c.green + '''
     The commands you can currently run are:
@@ -75,10 +92,13 @@ while True:
     - list
     - exit
     - clear''')
+
     elif main == 'exit':
         exit()
+
     elif main == 'clear':
         print(c.clear)
         mainmenu()
+
     else:
-        print(c.red + 'Invalid Command!')
+        print(c.red + 'Invalid Command! Try "list".')
