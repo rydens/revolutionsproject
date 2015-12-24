@@ -85,14 +85,14 @@ while True:
         "inventions" - some new inventions that were made during the revoulution
 
     elif main == 'list':
-        print(c.green + '''
+        print(c.green + '
     The commands you can currently run are:
     - help
     - quiz
     - learn
     - list
     - exit
-    - clear''')
+    - clear')
 
     elif main == 'exit':
         exit()
@@ -100,6 +100,3 @@ while True:
     elif main == 'clear':
         print(c.clear)
         mainmenu()
-
-    else:
-        print(c.red + 'Invalid Command! Try "list".')
