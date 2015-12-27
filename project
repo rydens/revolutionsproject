@@ -17,17 +17,6 @@ GPIO.setmode(GPIO.BCM)
 GPIO.setup(lightpins, GPIO.OUT)
 GPIO.setup(bpins, GPIO.IN)
 
-def help():
-    (c.clear + c.green + '''
-Welcome to the Help page! Time to learn about the commands. "help" just brings you to this page.
-When you use the command "quiz" from the main menu, you start the Quiz Game. If you use the command
-"learn" from the main menu, you will open the program that teaches you about the French Revolution.
-Type "list" to show a list of commands you can use. NOTE: All commands are lowercase.
-Type "exit" when you are finished.''')
-    help = input(c.green + '> ' + c.yellow)
-    if help == 'exit':
-        mainmenu()
-
 def mainmenu():
     print(c.green + '''
 Welcome to the main menu! You have 4 options: "help", "quiz", "learn", and "list".
@@ -85,7 +74,8 @@ while True:
     cleans up the screen. Some more commands:    "summary" - a summary of the French Revolution    "dates" - Major dates of the 
     French Revolution    "events" - events of the revolution    "timeline" - a timeline of the revolution    "people" - major people 
     of the revolution    "inventions" - some new inventions that were made during the revoulution.    Using the command "quiz" tells
-    you how to start the quiz game, when you are ready. NOTE: All commands are lowercase.''')
+    you how to start the quiz game, when you are ready, and "sources" lists my sources of my information. 
+    NOTE: All commands are lowercase.''')
 
             elif learn == 'list':
                 print(c.green + '''
@@ -100,7 +90,9 @@ while True:
     - timeline
     - people
     - inventions
-    - quiz''')
+    - quiz
+    - sources''')
+
             elif learn == 'exit':
                 exit()
            
@@ -112,7 +104,44 @@ while True:
                 print('yay')
 
             elif learn == 'dates':
-                print('yay')
+                print(c.green + 'And now, some of the major dates of the French Revolution.')
+                print(c.green + 'Please note, these dates, in a shorter form, will be in the timeline.')
+                print('''
+    - The enitire revolution was 1789 - 1799.
+    
+    - June, 1789: The National Assembly has begun.
+    - July, 1789: The storming of the Bastille, a French fortress.
+    - August, 1789: The National Assembly adopts "The Declaration of the Rights of Man and Citizen", which is
+      essentialy their declaration of independence from the throne.
+    - October, 1789: French women march on to the palace of Versailles and deman that the royal family return to Paris.
+    
+    - June, 1791: The royal family tries to flee France, but is caught.
+    - October, 1791: The Legislative Assembly is formed.
+    
+    - April, 1792: France declares war on Austria and Prussia.
+    - September, 1792: France is declared "The Republic of France".
+    - December, 1792: King Louis XVI's trial begins.
+    
+    - January, 1793: King Louis XVI is executed.
+    - February, 1793: France declares war on England and The Netherlands.
+    - April, 1793: The Committee of Public Safety is created.
+    - July, 1793: Maximilien Robespierre becomes the leader of the Committee of Public Safety.
+    - September, 1793: The Reign of Terror begins. Robespierre and the Committee of Public Saftey are massacring citizens, deeming them
+      "enemies of the revolution" and bheading them with the Guillotine, a new invention.
+    - October, 1793: King Louis XVI's wife, Queen Marie Antoinette, is executed.
+    - December, 1793: France has victory in it's war with Western Europe.
+    
+    - June, 1794: Robespierre is elcted President of the Convention.
+    - July, 1794: The Reign of Terror ends! Robespierre and his followers are arrested and beheaded. The Convention and Committee of Public Saftey are replaced by the Thermidorian Convention.
+
+    - 1795: France continues to have victories
+
+    - March to May, 1796: Napoleon is General of France's army and has lots of success throughout Europe.
+
+    - December, 1798: England, Russia, and Italy sign a pact against France.
+
+    - November, 1799: Napoleon takes over the Directory and declares himself Emperor of France. End of Revolution.
+    Type "clear" to clear the screen.''')
 
             elif learn == 'events':
                 print('yay')
@@ -128,6 +157,14 @@ while True:
  
             elif learn == 'quiz':
                print(c.green + 'To start the Quiz game, please restart the program by typing "exit" then "./project".')
+
+            elif learn == 'sources':
+               print(c.green + 'My sources:')
+               print('''
+    - mtholyoke.edu/courses/rschwart/hist255/kat_anna/timeline.html
+    -''')
+            else:
+                print(c.red + 'Invalid Command! Try "list".')
 
     elif main == 'list':
         print(c.green + '''
