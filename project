@@ -72,10 +72,10 @@ while True:
     Welcome to the Help page! Time to learn about the commands. "help" brings you to this page. When you
     use the command "list", you can see all of the commands you can currently run. Typing "exit" exits the program, and "clear"
     cleans up the screen. Some more commands:    "summary" - a summary of the French Revolution    "dates" - Major dates of the 
-    French Revolution    "events" - events of the revolution    "timeline" - a timeline of the revolution    "people" - major people 
-    of the revolution    "inventions" - some new inventions that were made during the revoulution.    Using the command "quiz" tells
-    you how to start the quiz game, when you are ready, and "sources" lists my sources of my information. 
-    NOTE: All commands are lowercase.''')
+    French Revolution    "events" - events of the revolution    "timeline1" - a timeline of the revolution, part 1    "timeline2" - a
+    timeline of the revolution, part 2    "people" - major people of the revolution    "inventions" - some new inventions that were 
+    made during the revoulution.    Using the command "quiz" tells you how to start the quiz game, when you are ready, and "sources" 
+    lists my sources of my information. NOTE: All commands are lowercase.''')
 
             elif learn == 'list':
                 print(c.green + '''
@@ -87,7 +87,8 @@ while True:
     - summary
     - dates
     - events
-    - timeline
+    - timeline1
+    - timeline2
     - people
     - inventions
     - quiz
@@ -132,9 +133,12 @@ while True:
     - December, 1793: France has victory in it's war with Western Europe.
     
     - June, 1794: Robespierre is elcted President of the Convention.
-    - July, 1794: The Reign of Terror ends! Robespierre and his followers are arrested and beheaded. The Convention and Committee of Public Saftey are replaced by the Thermidorian Convention.
+    - July, 1794: The Reign of Terror ends! Robespierre and his followers are arrested and beheaded. The Convention and Committee of Public Saftey 
+      are replaced by the Thermidorian Convention.
 
     - 1795: France continues to have victories
+    - August, 1795: France adopts a new constitution
+    - October, 1795: The Directory becomes the new government group who rule France.
 
     - March to May, 1796: Napoleon is General of France's army and has lots of success throughout Europe.
 
@@ -146,8 +150,90 @@ while True:
             elif learn == 'events':
                 print('yay')
 
-            elif learn == 'timeline':
-                print('yay')
+            elif learn == 'timeline1':
+                print(c.green + '''
+    Hopefully, a decent timeline of the dates in the "dates" command. Notes:
+    - Some months will be shortened to show that there are no events during that month.
+    - This is part 1; type "timeline2" for part 2 of the timeline.
+
+    1789:
+  January February March April May June             July          August          September October                         November December
+     |        |      |     |    |    |     *         |    *          |        *      |          |   *                  *        |      | |
+     |--------|------|-----|----|----|-----|---------|----|----------|--------|------|----------|---|------------------|--------|------|-|
+     |        |      |     |    |    |   3rd Estate  |    Fall of    |Assembly adopts|          |Women march to  Assembly is    |      | |
+                                       declares itself    Bastille  Declaration of the       Versailles; demand  installed in 
+                                       National Assembly          Rights of Man and Citizen  royal family return     Paris
+                                                                                                to Paris
+
+    1790:
+  January   February     March      April       May       June        July     August     September October    November     December
+     |          |          |          |          |          |          |          |          |          |          |          |          |
+     |----------|----------|----------|----------|----------|----------|----------|----------|----------|----------|----------|----------|
+     |          |          |          |          |          |          |          |          |          |          |          |          |
+
+    1791:
+  January   February     March      April       May       June        July     August     September October    November     December
+     |          |          |          |          |          |          |          |          |          |          |          |          |
+     |----------|----------|----------|----------|----------|----------|----------|----------|----------|----------|----------|----------|
+     |          |          |          |          |          |          |          |          |          |          |          |          |
+
+    1792:
+  January   February     March      April       May       June        July     August     September October    November     December
+     |          |          |          |          |          |          |          |          |          |          |          |          |
+     |----------|----------|----------|----------|----------|----------|----------|----------|----------|----------|----------|----------|
+     |          |          |          |          |          |          |          |          |          |          |          |          |
+
+    1793:
+  January   February     March      April       May       June        July     August     September October    November     December
+     |          |          |          |          |          |          |          |          |          |          |          |          |
+     |----------|----------|----------|----------|----------|----------|----------|----------|----------|----------|----------|----------|
+     |          |          |          |          |          |          |          |          |          |          |          |          |
+
+Remember - type "clear" to clean the screen when you are done!
+''')
+            elif learn == 'timeline2':
+                print(c.green + '''
+    Part 2 of the timeline. Notes:
+    - Some months will be shortened to show that there are no events during that month.
+    - This is part 2 of the timeline; type "timeline1" for part 1.
+  
+    1794:
+  January   February     March      April       May       June        July     August     September October    November     December
+     |          |          |          |          |          |          |          |          |          |          |          |          |
+     |----------|----------|----------|----------|----------|----------|----------|----------|----------|----------|----------|----------|
+     |          |          |          |          |          |          |          |          |          |          |          |          |
+
+    1795:
+  January   February     March      April       May       June        July     August     September October    November     December
+     |          |          |          |          |          |          |          |          |          |          |          |          |
+     |----------|----------|----------|----------|----------|----------|----------|----------|----------|----------|----------|----------|
+     |          |          |          |          |          |          |          |          |          |          |          |          |
+
+    1796:
+  January   February     March      April       May       June        July     August     September October    November     December
+     |          |          |          |          |          |          |          |          |          |          |          |          |
+     |----------|----------|----------|----------|----------|----------|----------|----------|----------|----------|----------|----------|
+     |          |          |          |          |          |          |          |          |          |          |          |          |
+
+    1797:
+  January   February     March      April       May       June        July     August     September October    November     December
+     |          |          |          |          |          |          |          |          |          |          |          |          |
+     |----------|----------|----------|----------|----------|----------|----------|----------|----------|----------|----------|----------|
+     |          |          |          |          |          |          |          |          |          |          |          |          |
+
+    1798:
+  January   February     March      April       May       June        July     August     September October    November     December
+     |          |          |          |          |          |          |          |          |          |          |          |          |
+     |----------|----------|----------|----------|----------|----------|----------|----------|----------|----------|----------|----------|
+     |          |          |          |          |          |          |          |          |          |          |          |          |
+
+    1799:
+  January   February     March      April       May       June        July     August     September October    November     December
+     |          |          |          |          |          |          |          |          |          |          |          |          |
+     |----------|----------|----------|----------|----------|----------|----------|----------|----------|----------|----------|----------|
+     |          |          |          |          |          |          |          |          |          |          |          |          |
+
+''')
    
             elif learn == 'people':
                 print('yay')
@@ -162,7 +248,7 @@ while True:
                print(c.green + 'My sources:')
                print('''
     - mtholyoke.edu/courses/rschwart/hist255/kat_anna/timeline.html
-    -''')
+    - My Social Studies notebook''')
             else:
                 print(c.red + 'Invalid Command! Try "list".')
 
