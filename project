@@ -155,6 +155,7 @@ while True:
     Hopefully, a decent timeline of the dates in the "dates" command. Notes:
     - Some months will be shortened to show that there are no events during that month.
     - This is part 1; type "timeline2" for part 2 of the timeline.
+    - There might be abbrieviations, such as "Assmbly", which means "Assembly", and "Con." meaning "Convention".
 
     1789:
   January February March April May June             July          August          September October                         November December
@@ -166,28 +167,36 @@ while True:
                                                                                                 to Paris
 
     1790:
-  January   February     March      April       May       June        July     August     September October    November     December
-     |          |          |          |          |          |          |          |          |          |          |          |          |
-     |----------|----------|----------|----------|----------|----------|----------|----------|----------|----------|----------|----------|
-     |          |          |          |          |          |          |          |          |          |          |          |          |
+  January February March April May June July August September      October November December
+     |        |      |     |    |    |   |      |      |               |       |      |      |
+     |--------|------|-----|----|----|---|------|------|----------|----|-------|------|------|
+     |        |      |     |    |    |   |      |      | Tricolor made |       |      |      |
+                                                         national flag
 
     1791:
-  January   February     March      April       May       June        July     August     September October    November     December
-     |          |          |          |          |          |          |          |          |          |          |          |          |
-     |----------|----------|----------|----------|----------|----------|----------|----------|----------|----------|----------|----------|
-     |          |          |          |          |          |          |          |          |          |          |          |          |
+  January February March April May June             July August September      October         November December
+     |        |      |     |    |    |               |      |      |               |               |      |      |
+     |--------|------|-----|----|----|--------|------|------|------|-|-------------|-|-------------|------|------|
+     |        |      |     |    |    | Royal family  |      |      |Nationa Assmbly| Legislative   |      |      |
+                                 tries to escape France;     votes on constitution;  Assmbly formed.
+                                     they are caught         accepted by king later
 
     1792:
-  January   February     March      April       May       June        July     August     September October    November     December
-     |          |          |          |          |          |          |          |          |          |          |          |          |
-     |----------|----------|----------|----------|----------|----------|----------|----------|----------|----------|----------|----------|
-     |          |          |          |          |          |          |          |          |          |          |          |          |
+  January February March April            May June July August          September                October November December
+     |        |      |     |               |    |   |      |               |                         |       |      |                |
+     |--------|------|-----|-----------|---|----|---|------|----------|----|---------|-----------|---|-------|------|-------|--------|
+     |        |      |     |France declares|    |   |      |People invade  |Legislative    France    |       |      | Trial of King  |
+                       war on Austria and Prussia     palace and take royal  Assmbly      declared                  Louis XVI begins
+                                                          family hostage   becomes Con.,    Republic of France
+                                                                         monarchy abolished.
 
     1793:
-  January   February     March      April       May       June        July     August     September October    November     December
-     |          |          |          |          |          |          |          |          |          |          |          |          |
-     |----------|----------|----------|----------|----------|----------|----------|----------|----------|----------|----------|----------|
-     |          |          |          |          |          |          |          |          |          |          |          |          |
+  January        February          March April            May June July          August September      October         November December
+     |               |               |     |               |    |   |               |      |               |               |      |      |
+     |-------|-------|-|-------------|-----|---|-----------|----|---|-----------|---|------|---|-----------|---------|-----|------|------|
+     |Execution of   |France declares|     |Committee of   |    |   |Robespierre is |      |Reign of Terror|  Execution of |      |      |
+   King Louis XVI   war on England and  Public Safety created   leader of Committee of          begins      Marie Antoinette
+                      The Netherlands                                Public Saftey
 
 Remember - type "clear" to clean the screen when you are done!
 ''')
@@ -196,42 +205,51 @@ Remember - type "clear" to clean the screen when you are done!
     Part 2 of the timeline. Notes:
     - Some months will be shortened to show that there are no events during that month.
     - This is part 2 of the timeline; type "timeline1" for part 1.
-  
+    - Some things will be abbreviated, such as "Con." meaning "Convention" and "CPS" meaning "Committee of Public Saftey".  
+
     1794:
-  January   February     March      April       May       June        July     August     September October    November     December
-     |          |          |          |          |          |          |          |          |          |          |          |          |
-     |----------|----------|----------|----------|----------|----------|----------|----------|----------|----------|----------|----------|
-     |          |          |          |          |          |          |          |          |          |          |          |          |
+  January February March April May June             July           August September October November December
+     |        |      |     |    |    |               |                |      |          |       |      |      |
+     |--------|------|-----|----|----|--|------------|----------|-----|------|----------|-------|------|------|
+     |        |      |     |    |    |Robespierre    |Robespierre     |      |          |       |      |      |
+                        elected President of the Con. caught, beheaded.
+                                                       Con./CPS replaced
+                                                    with Thermidorian Con. 
 
     1795:
-  January   February     March      April       May       June        July     August     September October    November     December
-     |          |          |          |          |          |          |          |          |          |          |          |          |
-     |----------|----------|----------|----------|----------|----------|----------|----------|----------|----------|----------|----------|
-     |          |          |          |          |          |          |          |          |          |          |          |          |
+  January February March April May June July August          September October           November December
+     |        |      |     |    |    |   |      |               |          |                 |      |      |
+     |--------|------|-----|----|----|---|------|---------|-----|----------|---------|-------|------|------|
+     |        |      |     |    |    |   |      | France adopts |          |Directory becomes|      |      |
+                                                new constitution         governing body of France
 
     1796:
-  January   February     March      April       May       June        July     August     September October    November     December
-     |          |          |          |          |          |          |          |          |          |          |          |          |
-     |----------|----------|----------|----------|----------|----------|----------|----------|----------|----------|----------|----------|
-     |          |          |          |          |          |          |          |          |          |          |          |          |
+  January February March April May June July August September October November        December
+     |        |      |     |    |    |   |      |      |          |       |             |      |
+     |--------|------|-----|----|----|---|------|------|----------|-------|------|------|------|
+     |        |      |     |    |    |   |      |      |          |       |Napoleon beat|      |
+                                                                        Austrians in battle
 
     1797:
-  January   February     March      April       May       June        July     August     September October    November     December
-     |          |          |          |          |          |          |          |          |          |          |          |          |
-     |----------|----------|----------|----------|----------|----------|----------|----------|----------|----------|----------|----------|
-     |          |          |          |          |          |          |          |          |          |          |          |          |
+  January February March April May June July August September October November December
+     |        |      |     |    |    |   |      |      |          |       |      |      |
+     |--------|------|-----|----|----|---|------|------|----------|-------|------|------|
+     |        |      |     |    |    |   |      |      |          |       |      |      |
 
     1798:
-  January   February     March      April       May       June        July     August     September October    November     December
-     |          |          |          |          |          |          |          |          |          |          |          |          |
-     |----------|----------|----------|----------|----------|----------|----------|----------|----------|----------|----------|----------|
-     |          |          |          |          |          |          |          |          |          |          |          |          |
+  January February March April May June July August September October November December
+     |        |      |     |    |    |   |      |      |          |       |      |               |
+     |--------|------|-----|--- |----|---|----- |----- |----------|-------|------|------------|--|
+     |        |      |     |    |    |   |      |      |          |       |      |Emgland,Russia,|
+                                                                          Italy sign pact against France
 
     1799:
-  January   February     March      April       May       June        July     August     September October    November     December
-     |          |          |          |          |          |          |          |          |          |          |          |          |
-     |----------|----------|----------|----------|----------|----------|----------|----------|----------|----------|----------|----------|
-     |          |          |          |          |          |          |          |          |          |          |          |          |
+  January February March April May June July August September October           November            December
+     |        |      |     |    |    |   |      |      |          |                 |                 |      |
+     |--------|------|-----|----|----|---|------|------|----------|-------|---------|-------|---------|------|
+     |        |      |     |    |    |   |      |      |          |Napolean returns |Napoleon declares|      |
+                                                  to France, leaving armies in Egypt  himself Emperor of
+                                                                                     France, end of revolution.
 
 ''')
    
