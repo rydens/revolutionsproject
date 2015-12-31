@@ -110,11 +110,11 @@ while True:
                 print('''
     - The enitire revolution was 1789 - 1799.
     
-    - June, 1789: The National Assembly has begun.
+    - June, 1789: The National Assembly has begun, with the representitives of the Third Estate taking the Tennis Court Oath.
     - July, 1789: The storming of the Bastille, a French fortress.
     - August, 1789: The National Assembly adopts "The Declaration of the Rights of Man and Citizen", which is
       essentialy their declaration of independence from the throne.
-    - October, 1789: French women march on to the palace of Versailles and deman that the royal family return to Paris.
+    - October, 1789: French women march on to the palace of Versailles and demand that the royal family return to Paris.
     
     - June, 1791: The royal family tries to flee France, but is caught.
     - October, 1791: The Legislative Assembly is formed.
@@ -128,7 +128,7 @@ while True:
     - April, 1793: The Committee of Public Safety is created.
     - July, 1793: Maximilien Robespierre becomes the leader of the Committee of Public Safety.
     - September, 1793: The Reign of Terror begins. Robespierre and the Committee of Public Saftey are massacring citizens, deeming them
-      "enemies of the revolution" and bheading them with the Guillotine, a new invention.
+      "enemies of the revolution" and beheading them with the Guillotine, a new invention.
     - October, 1793: King Louis XVI's wife, Queen Marie Antoinette, is executed.
     - December, 1793: France has victory in it's war with Western Europe.
     
@@ -148,7 +148,21 @@ while True:
     Type "clear" to clear the screen.''')
 
             elif learn == 'events':
-                print('yay')
+                print(c.green + 'Some major events of the French Revolution:')
+                print(c.green + '''
+    - June, 1789: National Assembly formed by the Tennis Court Oath
+    - July, 1789: Storming of the Bastille
+    - August, 1789: Adoption of "The Declaration of the Rights of Man and Citizen"
+    - October, 1791: The Legislative Assembly is formed.
+    - September, 1792: France is declared a republic.
+    - January, 1793: King Louis XVI is executed.
+    - September, 1793: The Reign of Terror begins.
+    - June, 1794: Robespierre, the leader of the Committee of Public Saftey, becomes leader of France.
+    - July, 1794: Robespierre and his followers are executed, and the Committee of Public Saftey and Convention are replaced by the
+      Thermidorian Convention.
+    - August, 1795: France adopts a new constitution
+    - October, 1795: The Directory is the new leadership group of France.
+    - November, 1799: Napoleon declares himself Emperor of France; end of revoltuion.
 
             elif learn == 'timeline1':
                 print(c.green + '''
@@ -199,7 +213,7 @@ while True:
                       The Netherlands                                Public Saftey
 
 Remember - type "clear" to clean the screen when you are done!
-''')
+''')]
             elif learn == 'timeline2':
                 print(c.green + '''
     Part 2 of the timeline. Notes:
