@@ -268,11 +268,32 @@ Remember - type "clear" to clean the screen when you are done!
 ''')
    
             elif learn == 'people':
-                print('yay')
+                print(c.green + 'Important people of the French Revolution:')
+                print(c.green + '''
+    - King Louis XVI: The King of France during the revolution. He was tried in December, 1792 and executed a 
+      month later. He married Marie Antoinette when she was 15 years old. He got the country deep in debt, and
+      called a meeting of the "Estates General" to try and fix the debt. He was born in 1754.
+
+    - Marie Antoinette: Born in 1755, she was the Queen of France during the Revolution. She married Louis XVI at age 15. She was
+      executed after her husaband, in October, 1793. She is said to have told all the poor and starving people who couldn't afford
+      bread "Let them eat cake!". 
+
+    - Maximilian Robespierre: Leader of the Committee of Public Saftey and eventually the Convention, Robespierre led the Reign of 
+      Terror, during which he beheaded over 30,000 people, deeming them "enemies of the revolution". However, in July, 1794, he was
+      beheaded himself because he was mercilessly killing tens of thousands of people.
+
+    - Napoleon Bonaparte: Born August, 1769, Napoleon might be one of the world's best military leaders. He got his chance right
+      after the end to the Reign of Terror and the Committee of Public Saftey. He was the greatest general in France, and won
+      victories against Austria, Europe, and other places. He also stopped some rebellions that were for the monarchy in France,
+      and expanded the French Empire a good deal. Unfortunetly for him, he also got defeated a couple of times. He became the first
+      emperor of France. He died on the island St. Helena after being exiled there.
 
             elif learn == 'inventions':
-                print('yay')
- 
+                print(c.green + 'Some devices and things created during the revolution, that had a role in it.')
+                print(c.green + '''
+    -  Guillotine: a device for beheading; got a lot of use during the Reign of Terror.
+    - The Metric system of measurement: created by Napoleon, and used almost everywhere today.
+
             elif learn == 'quiz':
                print(c.green + 'To start the Quiz game, please restart the program by typing "exit" then "./project".')
 
@@ -280,6 +301,8 @@ Remember - type "clear" to clean the screen when you are done!
                print(c.green + 'My sources:')
                print('''
     - mtholyoke.edu/courses/rschwart/hist255/kat_anna/timeline.html
+    - sites.google.com/a/ucps.k12.nc.us/mrms-7th-grade-social-studies-textbook/the-french-revolution/important-figures-of-the-french-revolution
+    - biography.com/people/napoleon-9420291
     - My Social Studies notebook''')
             else:
                 print(c.red + 'Invalid Command! Try "list".')
