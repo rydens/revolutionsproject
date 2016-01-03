@@ -102,7 +102,21 @@ while True:
                 learnwelcome()
 
             elif learn == 'summary':
-                print('yay')
+                print(c.green + 'A brief summary of the revolution.')
+                print(c.green + '''
+    The revolution pretty much started with King Louis XVI bringing the country into lots of debt and starving, along with his bad
+    leadership skills. He called a meeting of the Estates General, and locked out the 3rd Estate, who then decide to form the 
+    National Assembly on the King's tennis courts. The people storm the Bastille fortress, and gain weapons other than torches and
+    pitchforks. The National Assembly adopts the Declaration of the Rights of Man and Citizen to try and declare independence from 
+    the monarchy. French women come to the royal palace of Versailles and demand the king and queen return to paris; eventually,
+    they try to flee but are caught. The Legislative Assembly is formed, and a year later France becomes the Republic of France.
+    King Louis XVI is tried and executed, then the Committee of Public Saftey is created and the Reign of Terror begins, with 
+    Robespierre leading them in beheading thousands of citizens. The wife of King Louis XVI, Marie Antoinette, is executed, and 
+    Robespierre becomes the leader of the Convention, which is now the governing body of France. About a month later, he and his
+    followers are beheaded and the Convention and Committee of Public Saftey are replaced by the Thermidorian Convention, who 
+    adopts a new constitution. The Directory is now the governing body of France. Eventually, the famous French general Napoleon
+    declares himself emperor of France, and this is the end of the revolution. France went all the from a monarchy...
+    back to a monarchy. Yay!''')
 
             elif learn == 'dates':
                 print(c.green + 'And now, some of the major dates of the French Revolution.')
@@ -162,7 +176,7 @@ while True:
       Thermidorian Convention.
     - August, 1795: France adopts a new constitution
     - October, 1795: The Directory is the new leadership group of France.
-    - November, 1799: Napoleon declares himself Emperor of France; end of revoltuion.
+    - November, 1799: Napoleon declares himself Emperor of France; end of revoltuion.''')
 
             elif learn == 'timeline1':
                 print(c.green + '''
@@ -213,7 +227,7 @@ while True:
                       The Netherlands                                Public Saftey
 
 Remember - type "clear" to clean the screen when you are done!
-''')]
+''')
             elif learn == 'timeline2':
                 print(c.green + '''
     Part 2 of the timeline. Notes:
@@ -286,16 +300,16 @@ Remember - type "clear" to clean the screen when you are done!
       after the end to the Reign of Terror and the Committee of Public Saftey. He was the greatest general in France, and won
       victories against Austria, Europe, and other places. He also stopped some rebellions that were for the monarchy in France,
       and expanded the French Empire a good deal. Unfortunetly for him, he also got defeated a couple of times. He became the first
-      emperor of France. He died on the island St. Helena after being exiled there.
+      emperor of France. He died on the island St. Helena after being exiled there.''')
 
             elif learn == 'inventions':
                 print(c.green + 'Some devices and things created during the revolution, that had a role in it.')
                 print(c.green + '''
     -  Guillotine: a device for beheading; got a lot of use during the Reign of Terror.
-    - The Metric system of measurement: created by Napoleon, and used almost everywhere today.
+    - The Metric system of measurement: created by Napoleon, and used almost everywhere today.''')
 
             elif learn == 'quiz':
-               print(c.green + 'To start the Quiz game, please restart the program by typing "exit" then "./project".')
+               print(c.green + 'To start the Quiz game, please restart the program by typing "exit" then "./project", then start the quiz with "quiz".')
 
             elif learn == 'sources':
                print(c.green + 'My sources:')
