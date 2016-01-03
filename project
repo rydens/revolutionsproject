@@ -4,8 +4,8 @@ import colors as c
 import random as r
 import espeak as e
 import RPi.GPIO as GPIO
+import os
 
- 
 lightpins = [4,17,27,5,6,13,22,26,23,19,18,24]
 bpins = [25,12,16,20,21]
 gpins = [4,17,27]
@@ -38,6 +38,15 @@ def learnwelcome():
     Welcome to the Learn page! Time to learn about the French Revolution.
     Type "help" to learn about the commands.''')
 
+def quizhelp():
+    print(c.clear + c.green + '''
+    Quiz game help:  Type "exit" at any time to exit the program. You are being scored.
+    If you don't know the answer, type IDK or press the yellow button. Type "help" for help.
+    You can enter your answer in two ways: 1. Push the button for your answer. Buttons top to
+    bottom: A, B, C, D, IDK    2. Put in your answers with the keyboard. Notes: IDK means
+    "I Don't Know". Also, True/False questions can be answered as A meaning "true" and B meaning
+    "false", or type t/true or f/false. Push enter to begin.''')
+
 
 print(c.clear + c.green + '''
 Hello! Welcome to Ryan Densmore's Quiz game on the French Revolution!
@@ -48,7 +57,7 @@ print(c.clear)
 mainmenu()
 
 while True:
-    main = input(c.green + '> ' + c.yellow)
+    main = input(c.green + '> ' + c.yellow).strip().lower()
     if main == 'help':
         print(c.green + '''
         Welcome to the Help page! Time to learn about the commands. "help" just brings you to this page.
@@ -60,12 +69,41 @@ while True:
 
     elif main == 'quiz':
         print(c.green + 'Welcome to the Quiz Game! Before you play, make sure you have learned about the French Revolution!')
+        print(c.green + 'So, have you learned about the revolution?')
+        quizconfirm = input(c.green + 'y/n> ' + c.yellow).strip().lower()
+        if 'n' in quizconfirm:
+            print(c.green + 'Ok, see you later!')
+        if 'y' in quizconfirm:
+            print(c.green + 'Much Yays, starting the quiz.')
+            t.sleep(4)
+            print(c.clear)
+            loading()
+            print(c.clear + c.green + '''
+    Starting the quiz game. Type "exit" at any time to exit the program. You are being scored.
+    If you don't know the answer, type IDK or press the yellow button. Type "help" for help. 
+    You can enter your answer in two ways: 1. Push the button for your answer. Buttons top to 
+    bottom: A, B, C, D, IDK    2. Put in your answers with the keyboard. Notes: IDK means 
+    "I Don't Know". Also, True/False questions can be answered as A meaning "true" and B meaning 
+    "false", or type t/true or f/false. Push enter to begin.''')
+    
+            quizstart = input(c.green + '> ' + c.yellow).strip().lower()
+            if quizstart == '':
+                print(c.green + 'Great!')
+                t.sleep(.2)
+                print(c.clear + c.green + '''
+Q1:
+           
+           
+           
+           
+            else:
+                print(c.red + 'Uh Oh! You broke the program! Type "quiz" to fix the issue.') 
 
     elif main == 'learn':
         print(c.clear)
         learnwelcome()
         while True:
-            learn = input(c.green + '> ' + c.yellow)
+            learn = input(c.green + '> ' + c.yellow).strip().lower()
 
             if learn == 'help':
                 print(c.green + '''
