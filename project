@@ -4,7 +4,6 @@ import colors as c
 import random as r
 import espeak as e
 import RPi.GPIO as GPIO
-import os
 
 lightpins = [4,17,27,5,6,13,22,26,23,19,18,24]
 bpins = [25,12,16,20,21]
@@ -12,6 +11,7 @@ gpins = [4,17,27]
 rpins = [5,6,13]
 cpins = [22,26,23,19,18,24]
 score = 0
+q = 0
 
 GPIO.setmode(GPIO.BCM)
 GPIO.setup(lightpins, GPIO.OUT)
@@ -40,13 +40,26 @@ def learnwelcome():
 
 def quizhelp():
     print(c.clear + c.green + '''
-    Quiz game help:  Type "exit" at any time to exit the program. You are being scored.
-    If you don't know the answer, type IDK or press the yellow button. Type "help" for help.
-    You can enter your answer in two ways: 1. Push the button for your answer. Buttons top to
-    bottom: A, B, C, D, IDK    2. Put in your answers with the keyboard. Notes: IDK means
-    "I Don't Know". Also, True/False questions can be answered as A meaning "true" and B meaning
-    "false", or type t/true or f/false. Push enter to begin.''')
+    Quiz game help:  You are being scored. If you don't know the answer, press the yellow button.
+    You enter your answer by pushing the button for your answer. Buttons top to bottom: A, B, C, D, IDK    
+    Notes: True/False questions can be answered as A meaning "true" and B meaning "false". You also have 20 
+    seconds to answer each question, once you have read it. Please only push the button once. Push enter to begin.''')
 
+def correct():
+    print(c.green + '''
+    CORRECT!''')
+    for count in range(3):
+        GPIO.output(gpins, 1)
+        t.sleep(.4)
+        GPIO.output(gpins, 0)
+
+def wrong():
+    print(c.red + '''
+    WRONG!''')
+    for count in range(3):
+        GPIO.output(rpins, 1)
+        t.sleep(.2)
+        GPIO.output(rpins, 0)
 
 print(c.clear + c.green + '''
 Hello! Welcome to Ryan Densmore's Quiz game on the French Revolution!
@@ -68,36 +81,110 @@ while True:
         mainmenu()    
 
     elif main == 'quiz':
-        print(c.green + 'Welcome to the Quiz Game! Before you play, make sure you have learned about the French Revolution!')
-        print(c.green + 'So, have you learned about the revolution?')
+        q = 0
+        print(c.green + '''
+    So you think you are ready to play the quiz game? Have you studied the French Revolution?''')
         quizconfirm = input(c.green + 'y/n> ' + c.yellow).strip().lower()
-        if 'n' in quizconfirm:
-            print(c.green + 'Ok, see you later!')
         if 'y' in quizconfirm:
-            print(c.green + 'Much Yays, starting the quiz.')
-            t.sleep(4)
+            print(c.green + 'Much Yays! Starting quiz game.')
+            t.sleep(2.5)
             print(c.clear)
-            loading()
-            print(c.clear + c.green + '''
-    Starting the quiz game. Type "exit" at any time to exit the program. You are being scored.
-    If you don't know the answer, type IDK or press the yellow button. Type "help" for help. 
-    You can enter your answer in two ways: 1. Push the button for your answer. Buttons top to 
-    bottom: A, B, C, D, IDK    2. Put in your answers with the keyboard. Notes: IDK means 
-    "I Don't Know". Also, True/False questions can be answered as A meaning "true" and B meaning 
-    "false", or type t/true or f/false. Push enter to begin.''')
-    
-            quizstart = input(c.green + '> ' + c.yellow).strip().lower()
+            quizhelp()
+            quizstart = input(c.green + '> ' + c.yellow)
             if quizstart == '':
                 print(c.green + 'Great!')
-                t.sleep(.2)
-                print(c.clear + c.green + '''
-Q1:
-           
-           
-           
-           
+                t.sleep(1)
+                print(c.clear)
+                print(c.green + '''
+Q1: Who was the king of France during the revolution?
+A: King Henry VIII
+B: King Tut
+C: King George III
+D: King Louis XVI''')
+                t.sleep(5)
+                for count in range(200):
+                    if GPIO.input(20) == False:
+                        correct()
+                        score += 1
+                        q = 1
+                    elif GPIO.input(25) == False or GPIO.input(12) == False or GPIO.input(16) == False:
+                        wrong()
+                        print(c.green + '''
+    The right answer is D: King Louis XVI''')
+                        q = 1
+                    elif GPIO.input(21) == False:
+                        print(c.green + '''
+    The right answer is D: King Louis XVI''')
+                        q = 1
+                    t.sleep(.1)
+                if q == 0:
+                    print(c.green + '''
+    The right answer is D: King Louis XVI''')
+                    t.sleep(.1)
+
+                print(c.green + '''
+Q2: Who was the queen of France during the revolution?
+A: Queen Elizabeth II
+B: Queen Hatshepsut
+C: Queen Marie Antoinette
+D: Queen Victoria''')
+                q = 0
+                t.sleep(5)
+                for count in range(200):
+                    if GPIO.input(16) == False:
+                        correct()
+                        score += 1
+                        q = 1
+                    elif GPIO.input(25) == False or GPIO.input(12) == False or GPIO.input(20) == False:
+                        wrong()
+                        print(c.green + '''
+    The right answer is C: Queen Marie Antoinette''')
+                        q = 1
+                    elif GPIO.input(21) == False:
+                        print(c.green + '''
+    The right answer is C: Queen Marie Antoinette''')
+                        q = 1
+                    t.sleep(.1)
+                if q == 0:
+                    print(c.green + '''
+    The right answer is C: Queen Marie Antoinette''')
+                    t.sleep(.1)
+
+                print('''
+Q3: Which is one of the causes of the revolution?
+A: The king gave free food to the entire country
+B: The king brought France deep into debt
+C: Thomas Jefferson became king of France, but the people didn't like him
+D: The king and queen got divorced, and the people were mad''')
+                q = 0
+                t.sleep(5)
+                for count in range(200):
+                    if GPIO.input(12) == False:
+                        correct()
+                        score += 1
+                        q = 1
+                    elif GPIO.input(25) == False or GPIO.input(16) == False or GPIO.input(20) == False:
+                        wrong()
+                        print(c.green + '''
+    The right answer is B: The king brought France deep in debt''')
+                        q = 1
+                    elif GPIO.input(21) == False:
+                        print(c.green + '''
+    The right answer is B: The king brought France deep in debt''')
+                        q = 1
+                    t.sleep(.1)
+                if q == 0:
+                    print(c.green + '''
+    The right answer is B: The king brought France deep in debt''')
+
+
             else:
-                print(c.red + 'Uh Oh! You broke the program! Type "quiz" to fix the issue.') 
+                print(c.red + 'Uh Oh! You broke the program! Type "quiz" to restart.')
+        elif 'n' in quizconfirm:
+            print(c.green + 'Ok. See you later!')
+        else:
+            print(c.red + 'Uh Oh! You broke the program! Type "quiz" to fix the issue.')
+        
 
     elif main == 'learn':
         print(c.clear)
