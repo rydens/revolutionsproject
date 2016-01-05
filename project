@@ -2,7 +2,6 @@
 import time as t
 import colors as c
 import random as r
-import espeak as e
 import RPi.GPIO as GPIO
 
 lightpins = [4,17,27,5,6,13,22,26,23,19,18,24]
@@ -95,6 +94,8 @@ while True:
                 print(c.green + 'Great!')
                 t.sleep(1)
                 print(c.clear)
+                
+
                 print(c.green + '''
 Q1: Who was the king of France during the revolution?
 A: King Henry VIII
@@ -121,6 +122,7 @@ D: King Louis XVI''')
                     print(c.green + '''
     The right answer is D: King Louis XVI''')
                     t.sleep(.1)
+
 
                 print(c.green + '''
 Q2: Who was the queen of France during the revolution?
@@ -150,6 +152,7 @@ D: Queen Victoria''')
     The right answer is C: Queen Marie Antoinette''')
                     t.sleep(.1)
 
+
                 print('''
 Q3: Which is one of the causes of the revolution?
 A: The king gave free food to the entire country
@@ -176,6 +179,67 @@ D: The king and queen got divorced, and the people were mad''')
                 if q == 0:
                     print(c.green + '''
     The right answer is B: The king brought France deep in debt''')
+
+
+                print('''
+Q4: Which choice explains the Reign on Terror during the revolution?
+A: Napoleon attacked villages, inprisoning everyone
+B: The king beheaded over 40,000 people because they were helping the revolution
+C: Robespierre and the Committee of Public Saftey beheaded anyone who they they thought were "enemies of the revolution"
+D: George Washington went crazy and bombarded France for 3 years''')
+                q = 0
+                t.sleep(5)
+                for count in range(200):
+                    if GPIO.input(16) == False:
+                        correct()
+                        score += 1
+                        q = 1
+                    elif GPIO.input(25) == False or GPIO.input(12) == False or GPIO.input(20) == False:
+                        wrong()
+                        print(c.green + '''
+    The right answer is C: Robespierre and the Committee of Public Saftey beheaded anyone who they thought were "enemies of the revolution"''')
+                        q = 1
+                    elif GPIO.input(21) == False:
+                        print(c.green + '''
+    The right answer is C: Robespierre and the Committee of Public Saftey beheaded anyone who they thought were "enemies of the revolution"''')
+                        q = 1
+                    t.sleep(.1)
+                if q == 0:
+                    print(c.green + '''
+    The right answer is C: Robespierre and the Committee of Public Saftey beheaded anyone who they thought were "enemies of the revolution"''')
+
+
+                print('''
+Q5: True or False: The French Estates are essentialy social classes.
+A: True
+B: False''')
+                q = 0
+                t.sleep(3)
+                for count in range(200):
+                    if GPIO.input(25) == False:
+                        correct()
+                        score += 1
+                        q = 1
+                    elif GPIO.input(12) == False:
+                        wrong()
+                        print(c.green + '''
+    The right answer is A: True''')
+                        q = 1
+                    elif GPIO.input(16) == False or GPIO.input(20) == False:
+                        print(c.green + '''
+    That is not a choice. Please answer the question with either A or B.''')
+                    elif GPIO.input(21) == False:
+                        print(c.green + '''
+    The right answer is A: True''')
+                if q == 0:
+                    print(c.green + '''
+    The right answer is A: True''')
+
+
+
+
+
+
 
 
             else:
