@@ -236,6 +236,39 @@ B: False''')
     The right answer is A: True''')
 
 
+                print('''
+Q6: What did the revolutionary people want for France?
+A: More rights for the Third Estate
+B: A new king
+C: More rights for the First Estate
+D: More taxes so France could buy food''')
+                q = 0
+                t.sleep(5)
+                for count in range(200):
+                    if GPIO.input(25) == False:
+                        correct()
+                        score += 1
+                        q = 1
+                    elif GPIO.input(12) == False or GPIO.input(16) == False or GPIO.input(20) == False:
+                        wrong()
+                        print(c.green + '''
+    The right answer is A: More rights for the Third Estate''')
+                        q = 1
+                    elif GPIO.input(21) == False:
+                        print(c.green + '''
+    The right answer is A: More rights for the Third Estate''')
+                        q = 1
+                if q == 0:
+                    print(c.green + '''
+    The right answer is A: More rights for the Third Estate''')
+
+
+                print('''
+Q7: Why was the storming of the Bastille fortress important to the revolution?
+A: It was Napoleon's first victory
+B: The king happened to be at the fort, and the people beheaded him
+C: 
+
 
 
 
