@@ -295,9 +295,60 @@ D: The people got weapons and the king realized he had lost control of the peopl
 
 
 
-                    print('''
-Q7:''')
+                print('''
+Q8: Which document did the National Assembly adopt right after they formed, and tryed to uphold throughout the revolution?
+A: The Declaration of Independence
+B: The Declaration of the Rights of Man and Citizen
+C: The Constitution
+D: The Bill of Rights''')
+                q = 0
+                t.sleep(5)
+                for count in range(200):
+                    if GPIO.input(12) == False:
+                        correct()
+                        score += 1
+                        q = 1
+                elif GPIO.input(25) == False or GPIO.input(16) == False or GPIO.input(20) == False:
+                    wrong()
+                    print(c.green + '''
+    The right answer is B: The Declaration of the Rights of Man and Citizen''')
+                        q = 1
+                    elif GPIO.input(21) == False:
+                        print(c.green + '''
+    The right answer is B: The Declaration of the Rights of Man and Citizen''')
+                        q = 1
+                    t.sleep(.1)
+                if q == 0:
+                    print(c.green + '''
+    The right answer is B: The Declaration of the Rights of Man and Citizen''')
 
+
+                print('''
+Q9: Fill in the missing word. The French Revolution brought France from a monarchy all the way to a ___________.
+A: Monarchy
+B: Democracy
+C: Communist Society
+D: Oligarchy''')
+                q = 0
+                t.sleep(5)
+                for count in range(200):
+                    if GPIO.input(25) == False:
+                        correct()
+                        score += 1
+                        q = 1
+                    elif GPIO.input(12) == False or GPIO.input(16) == False or GPIO.input(20) == False:
+                        wrong()
+                        print(c.green + '''
+    The right answer is A: Monarchy''')
+                        q = 1
+                    elif GPIO.input(21) == False:
+                        print(c.green + '''
+    The right answer is A: Monarchy''')
+                        q = 1
+                    t.sleep(.1)
+                if q == 0:
+                    print(c.green + '''
+    The right answer is A: Monarchy''')
 
 
 
