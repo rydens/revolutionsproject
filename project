@@ -367,7 +367,58 @@ D: It gave inspiration to America for their revolution''')
                     elif GPIO.input(25) == False or GPIO.input(12) == False or GPIO.input(20) == False:
                         wrong()
                         print(c.green + '''
-    The right answer is '''
+    The right answer is C: It gave inspiration to Hati and Spain's lands in South America''')
+                        q = 1
+                    elif GPIO.input(21) == False:
+                        print(c.green + '''
+    The right answer is C: It gave inspiration to Hati and Spain's lands in South America''')
+                        q = 1
+                    t.sleep(.1)
+                if q == 0:
+                    print(c.green + '''
+    The right answer is C: It gave inspiration to Hati and Spain's lands in South America''')
+    
+    
+                print('''
+Q11: Which revolution{s} did the French people get inspiration from for their revolution?
+A: It was the first revolution, so it didn't get inspiration from another revolution at all
+B: The American revolution, because the French helped and it was successful, the people thought they could do it too.
+C: It was the last revolution, so it got inspiration from all the revolutions before it.
+D: The Haitian and Latin~American Revolutions because they were successful.''')
+                q = 0
+                t.sleep(5)
+                for count in range(200):
+                    if GPIO.input(12) == False:
+                        correct()
+                        score += 1
+                        q = 1
+                    elif GPIO.input(25) == False or GPIO.input(16) == False or GPIO.input(20) == False:
+                        wrong()
+                        print(c.green + '''
+    The correct answer is B: The American revolution, because the French helped and it was successful, 
+    the people thought they could do it too.''')
+                        q = 1
+                    elif GPIO.input(21) == False:
+                        print(c.green + '''
+    The correct answer is B: The American revolution, because the French helped and it was successful, 
+    the people thought they could do it too.''')
+                        q = 1
+                    t.sleep(.1)
+                if q == 0:
+                    print(c.green + '''
+    The correct answer is B: The American revolution, because the French helped and it was successful, 
+    the people thought they could do it too.''')
+    
+    
+                print('''
+Q12: About how many citizens were killed during the Reign of Terror?
+A: 7
+B: 40,000
+C: 5,000
+D. 400,000,000,000''')
+                q = 0
+
+
 
 
             else:
