@@ -11,7 +11,7 @@ lights.
 
 
 
-## You can even learn
+## ermergherd, you can even learn!
 With this program, you don't need to go looking for the answers. Before you run the quiz, use the ```learn``` command
 from the main menu.
 
