@@ -231,6 +231,8 @@ B: False''')
                     elif GPIO.input(21) == False:
                         print(c.green + '''
     The right answer is A: True''')
+                        q = 1
+                    t.sleep(.1)
                 if q == 0:
                     print(c.green + '''
     The right answer is A: True''')
@@ -258,6 +260,7 @@ D: More taxes so France could buy food''')
                         print(c.green + '''
     The right answer is A: More rights for the Third Estate''')
                         q = 1
+                    t.sleep(.1)
                 if q == 0:
                     print(c.green + '''
     The right answer is A: More rights for the Third Estate''')
@@ -267,8 +270,33 @@ D: More taxes so France could buy food''')
 Q7: Why was the storming of the Bastille fortress important to the revolution?
 A: It was Napoleon's first victory
 B: The king happened to be at the fort, and the people beheaded him
-C: 
+C: The people freed dangerous people from prisons there
+D: The people got weapons and the king realized he had lost control of the people''')
+                q = 0
+                t.sleep(5)
+                for count in range(200):
+                    if GPIO.input(20) == False:
+                        correct()
+                        score += 1
+                        q = 1
+                    elif GPIO.input(25) == False or GPIO.input(12) == False or GPIO.input(16) == False:
+                        wrong()
+                        print(c.green + '''
+    The right answer is D: The people got weapons and the king realized he had lost control of the people''')
+                        q = 1
+                    elif GPIO.input(21) == False:
+                        print(c.green + '''
+    The right answer is D: The people got weapons and the king realized he had lost control of the people''')
+                        q = 1
+                    t.sleep(.1)
+                if q == 0:
+                    print(c.green + '''
+    The right answer is D: The people got weapons and the king realized he had lost control of the people''')
 
+
+
+                    print('''
+Q7:''')
 
 
 
