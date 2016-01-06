@@ -355,8 +355,19 @@ D: Oligarchy''')
 Q10: How did the revolution affect the world?
 A: It was the last revolution, so it didn't affect the wrold at all
 B: It wasn't the first or the last revolution, but didn't affect the wrold at all
-C: It gave inspiration to Hati and Spain's lands in SOuth America
-D: It gave inspiration to America
+C: It gave inspiration to Hati and Spain's lands in South America
+D: It gave inspiration to America for their revolution''')
+                q = 0
+                t.sleep(5)
+                for count in range(200):
+                    if GPIO.input(16) == False:
+                        correct()
+                        score += 1
+                        q = 1
+                    elif GPIO.input(25) == False or GPIO.input(12) == False or GPIO.input(20) == False:
+                        wrong()
+                        print(c.green + '''
+    The right answer is '''
 
 
             else:
