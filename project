@@ -467,6 +467,9 @@ B: False''')
                     print(c.green + '''
     The right answer is A: True''')
 
+
+   
+
             else:
                 print(c.red + 'Uh Oh! You broke the program! Type "quiz" to restart.')
         elif 'n' in quizconfirm:
