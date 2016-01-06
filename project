@@ -351,7 +351,12 @@ D: Oligarchy''')
     The right answer is A: Monarchy''')
 
 
-
+                print('''
+Q10: How did the revolution affect the world?
+A: It was the last revolution, so it didn't affect the wrold at all
+B: It wasn't the first or the last revolution, but didn't affect the wrold at all
+C: It gave inspiration to Hati and Spain's lands in SOuth America
+D: It gave inspiration to America
 
 
             else:
