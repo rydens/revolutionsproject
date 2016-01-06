@@ -417,9 +417,55 @@ B: 40,000
 C: 5,000
 D. 400,000,000,000''')
                 q = 0
-
-
-
+                t.sleep(5)
+                for count in range(200):
+                    if GPIO.input(12) == False:
+                        correct()
+                        score += 1
+                        q = 1
+                    elif GPIO.input(25) == False or GPIO.input(16) == False or GPIO.input(20) == False:
+                        wrong()
+                        print(c.green + '''
+    The right answer is B: 40,000''')
+                        q = 1
+                    elif GPIO.input(21) == False:
+                        print(c.green + '''
+    The right answer is B: 40,000''')
+                        q = 1
+                    t.sleep(.1)
+                if q == 0:
+                    print(c.green + '''
+    The right answer is B: 40,000''')
+    
+    
+                print('''
+Q13: True or False: One of the things the Declaration of the Rights of Man and Citizen considered
+     most precious was freedom of speech.
+A: True
+B: False''')
+                q = 0
+                t.sleep(4)
+                for count in range(200):
+                    if GPIO.input(25) == False:
+                        correct()
+                        score += 1
+                        q = 1
+                    elif GPIO.input(12) == False:
+                        wrong()
+                        print(c.green + '''
+    The right answer is A: True''')
+                        q = 1
+                    elif GPIO.input(16) == False or GPIO.input(20) == False:
+                        print(c.green + '''
+    That is not a choice. Please answer the question with either A or B.''')
+                    elif GPIO.input(21) == False:
+                        print(c.green + '''
+    The right answer is A: True''')
+                        q = 1
+                    t.sleep(.1)
+                if q == 0:
+                    print(c.green + '''
+    The right answer is A: True''')
 
             else:
                 print(c.red + 'Uh Oh! You broke the program! Type "quiz" to restart.')
