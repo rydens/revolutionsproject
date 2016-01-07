@@ -296,7 +296,7 @@ D: The people got weapons and the king realized he had lost control of the peopl
 
 
                 print('''
-Q8: Which document did the National Assembly adopt right after they formed, and tryed to uphold throughout the revolution?
+Q8: Which document did the National Assembly adopt right after they formed, and tried to uphold throughout the revolution?
 A: The Declaration of Independence
 B: The Declaration of the Rights of Man and Citizen
 C: The Constitution
@@ -308,9 +308,9 @@ D: The Bill of Rights''')
                         correct()
                         score += 1
                         q = 1
-                elif GPIO.input(25) == False or GPIO.input(16) == False or GPIO.input(20) == False:
-                    wrong()
-                    print(c.green + '''
+                    elif GPIO.input(25) == False or GPIO.input(16) == False or GPIO.input(20) == False:
+                        wrong()
+                        print(c.green + '''
     The right answer is B: The Declaration of the Rights of Man and Citizen''')
                         q = 1
                     elif GPIO.input(21) == False:
@@ -497,7 +497,7 @@ D: The National Assembly''')
     
     
                 print('''
-Q15: Which years had the revolution happened in?
+Q15: Which years did the revolution happen in?
 A: 2015-2019
 B: 1989-1999
 C: 1789-1799
