@@ -81,6 +81,7 @@ while True:
         mainmenu()    
 
     elif main == 'quiz':
+        score = 0
         q = 0
         print(c.green + '''
     So you think you are ready to play the quiz game? Have you studied the French Revolution?''')
@@ -582,7 +583,7 @@ Yay! You finished the quiz. Your score is ''' + str(score) + '/15.')
                 
                 print(c.green + '''
 Thanks for taking the quiz!''')
-                t.sleep(5)
+                t.sleep(10)
                 print(c.clear)
                 mainmenu()
 
