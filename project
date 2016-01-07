@@ -42,7 +42,8 @@ def quizhelp():
     Quiz game help:  You are being scored. If you don't know the answer, press the yellow button.
     You enter your answer by pushing the button for your answer. Buttons top to bottom: A, B, C, D, IDK    
     Notes: True/False questions can be answered as A meaning "true" and B meaning "false". You also have 20 
-    seconds to answer each question, once you have read it. Please only push the button once. Push enter to begin.''')
+    seconds to answer each question, once you have read it. Please only push the button once, and if it doesn't
+    work, wait one second and push it again. Push enter to begin.''')
 
 def correct():
     print(c.green + '''
@@ -83,6 +84,7 @@ while True:
         q = 0
         print(c.green + '''
     So you think you are ready to play the quiz game? Have you studied the French Revolution?''')
+        print()
         quizconfirm = input(c.green + 'y/n> ' + c.yellow).strip().lower()
         if 'y' in quizconfirm:
             print(c.green + 'Much Yays! Starting quiz game.')
@@ -117,6 +119,7 @@ D: King Louis XVI''')
                         print(c.green + '''
     The right answer is D: King Louis XVI''')
                         q = 1
+                        t.sleep(.1)
                     t.sleep(.1)
                 if q == 0:
                     print(c.green + '''
@@ -146,6 +149,7 @@ D: Queen Victoria''')
                         print(c.green + '''
     The right answer is C: Queen Marie Antoinette''')
                         q = 1
+                        t.sleep(.1)
                     t.sleep(.1)
                 if q == 0:
                     print(c.green + '''
@@ -175,6 +179,7 @@ D: The king and queen got divorced, and the people were mad''')
                         print(c.green + '''
     The right answer is B: The king brought France deep in debt''')
                         q = 1
+                        t.sleep(.1)
                     t.sleep(.1)
                 if q == 0:
                     print(c.green + '''
@@ -183,7 +188,7 @@ D: The king and queen got divorced, and the people were mad''')
 
                 print('''
 Q4: Which choice explains the Reign on Terror during the revolution?
-A: Napoleon attacked villages, inprisoning everyone
+A: Napoleon attacked villages, imprisoning everyone
 B: The king beheaded over 40,000 people because they were helping the revolution
 C: Robespierre and the Committee of Public Saftey beheaded anyone who they they thought were "enemies of the revolution"
 D: George Washington went crazy and bombarded France for 3 years''')
@@ -203,6 +208,7 @@ D: George Washington went crazy and bombarded France for 3 years''')
                         print(c.green + '''
     The right answer is C: Robespierre and the Committee of Public Saftey beheaded anyone who they thought were "enemies of the revolution"''')
                         q = 1
+                        t.sleep(.1)
                     t.sleep(.1)
                 if q == 0:
                     print(c.green + '''
@@ -232,6 +238,7 @@ B: False''')
                         print(c.green + '''
     The right answer is A: True''')
                         q = 1
+                        t.sleep(.1)
                     t.sleep(.1)
                 if q == 0:
                     print(c.green + '''
@@ -260,6 +267,7 @@ D: More taxes so France could buy food''')
                         print(c.green + '''
     The right answer is A: More rights for the Third Estate''')
                         q = 1
+                        t.sleep(.1)
                     t.sleep(.1)
                 if q == 0:
                     print(c.green + '''
@@ -288,6 +296,7 @@ D: The people got weapons and the king realized he had lost control of the peopl
                         print(c.green + '''
     The right answer is D: The people got weapons and the king realized he had lost control of the people''')
                         q = 1
+                        t.sleep(.1)
                     t.sleep(.1)
                 if q == 0:
                     print(c.green + '''
@@ -317,6 +326,7 @@ D: The Bill of Rights''')
                         print(c.green + '''
     The right answer is B: The Declaration of the Rights of Man and Citizen''')
                         q = 1
+                        t.sleep(.1)
                     t.sleep(.1)
                 if q == 0:
                     print(c.green + '''
@@ -345,6 +355,7 @@ D: Oligarchy''')
                         print(c.green + '''
     The right answer is A: Monarchy''')
                         q = 1
+                        t.sleep(.1)
                     t.sleep(.1)
                 if q == 0:
                     print(c.green + '''
@@ -373,6 +384,7 @@ D: It gave inspiration to America for their revolution''')
                         print(c.green + '''
     The right answer is C: It gave inspiration to Hati and Spain's lands in South America''')
                         q = 1
+                        t.sleep(.1)
                     t.sleep(.1)
                 if q == 0:
                     print(c.green + '''
@@ -384,7 +396,7 @@ Q11: Which revolution{s} did the French people get inspiration from for their re
 A: It was the first revolution, so it didn't get inspiration from another revolution at all
 B: The American revolution, because the French helped and it was successful, the people thought they could do it too.
 C: It was the last revolution, so it got inspiration from all the revolutions before it.
-D: The Haitian and Latin~American Revolutions because they were successful.''')
+D: The Haitian and Latin-American Revolutions because they were successful.''')
                 q = 0
                 t.sleep(5)
                 for count in range(200):
@@ -403,6 +415,7 @@ D: The Haitian and Latin~American Revolutions because they were successful.''')
     The correct answer is B: The American revolution, because the French helped and it was successful, 
     the people thought they could do it too.''')
                         q = 1
+                        t.sleep(.1)
                     t.sleep(.1)
                 if q == 0:
                     print(c.green + '''
@@ -432,6 +445,7 @@ D. 400,000,000,000''')
                         print(c.green + '''
     The right answer is B: 40,000''')
                         q = 1
+                        t.sleep(.1)
                     t.sleep(.1)
                 if q == 0:
                     print(c.green + '''
@@ -462,6 +476,7 @@ B: False''')
                         print(c.green + '''
     The right answer is B: False''')
                         q = 1
+                        t.sleep(.1)
                     t.sleep(.1)
                 if q == 0:
                     print(c.green + '''
@@ -490,6 +505,7 @@ D: The National Assembly''')
                         print(c.green + '''
     The right answer is D: The National Assembly''')
                         q = 1
+                        t.sleep(.1)
                     t.sleep(.1)
                 if q == 0:
                     print(c.green + '''
@@ -518,6 +534,7 @@ D: 1689-1699''')
                         print(c.green + '''
     The right answer is C: 1789-1799''')
                         q = 1
+                        t.sleep(.1)
                     t.sleep(.1)
                 if q == 0:
                     print(c.green + '''
@@ -527,7 +544,7 @@ D: 1689-1699''')
                 t.sleep(1)
                 print(c.green + '''
                 
-Yay! You finished the quiz. Your score is ''' + score + '/15.')
+Yay! You finished the quiz. Your score is ''' + str(score) + '/15.')
                 if score == 0:
                     print('Or, 0%.')
                 elif score == 1:
@@ -565,7 +582,7 @@ Yay! You finished the quiz. Your score is ''' + score + '/15.')
                 
                 print(c.green + '''
 Thanks for taking the quiz!''')
-                t.sleep(2)
+                t.sleep(5)
                 print(c.clear)
                 mainmenu()
 
