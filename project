@@ -440,33 +440,134 @@ D. 400,000,000,000''')
     
                 print('''
 Q13: True or False: One of the things the Declaration of the Rights of Man and Citizen considered
-     most precious was freedom of speech.
+     most precious was geting a new king.
 A: True
 B: False''')
                 q = 0
                 t.sleep(4)
                 for count in range(200):
-                    if GPIO.input(25) == False:
+                    if GPIO.input(12) == False:
                         correct()
                         score += 1
                         q = 1
-                    elif GPIO.input(12) == False:
+                    elif GPIO.input(25) == False:
                         wrong()
                         print(c.green + '''
-    The right answer is A: True''')
+    The right answer is B: False''')
                         q = 1
                     elif GPIO.input(16) == False or GPIO.input(20) == False:
                         print(c.green + '''
     That is not a choice. Please answer the question with either A or B.''')
                     elif GPIO.input(21) == False:
                         print(c.green + '''
-    The right answer is A: True''')
+    The right answer is B: False''')
                         q = 1
                     t.sleep(.1)
                 if q == 0:
                     print(c.green + '''
-    The right answer is A: True''')
-
+    The right answer is B: False''')
+    
+    
+                print('''
+Q14: What was the government group formed by the Third Estate in the beginning?
+A: The Constitutional Convention
+B: Parliament
+C: The Directory
+D: The National Assembly''')
+                q = 0
+                t.sleep(5)
+                for count in range(200):
+                    if GPIO.input(20) == False:
+                        correct()
+                        score += 1
+                        q = 1
+                    elif GPIO.input(25) == False or GPIO.input(12) == False or GPIO.input(16) == False:
+                        wrong()
+                        print(c.green + '''
+    The right answer is D: The National Assembly''')
+                        q = 1
+                    elif GPIO.input(21) == False:
+                        print(c.green + '''
+    The right answer is D: The National Assembly''')
+                        q = 1
+                    t.sleep(.1)
+                if q == 0:
+                    print(c.green + '''
+    The right answer is D: The National Assembly''')
+    
+    
+                print('''
+Q15: Which years had the revolution happened in?
+A: 2015-2019
+B: 1989-1999
+C: 1789-1799
+D: 1689-1699''')
+                q = 0
+                t.sleep(5)
+                for count in range(200):
+                    if GPIO.input(16) == False:
+                        correct()
+                        score += 1
+                        q = 1
+                    elif GPIO.input(25) == False or GPIO.input(12) == False or GPIO.input(20) == False:
+                        wrong()
+                        print(c.green + '''
+    The right answer is C: 1789-1799''')
+                        q = 1
+                    elif GPIO.input(21) == False:
+                        print(c.green + '''
+    The right answer is C: 1789-1799''')
+                        q = 1
+                    t.sleep(.1)
+                if q == 0:
+                    print(c.green + '''
+    The right answer is C: 1789-1799''')
+    
+    
+                t.sleep(1)
+                print(c.green + '''
+                
+Yay! You finished the quiz. Your score is ''' + score + '/15.)
+                if score == 0:
+                    print('Or, 0%.')
+                elif score == 1:
+                    print('Or, 6.66%.')
+                elif score == 2:
+                    print('Or, 13.33%.')
+                elif score == 3:
+                    print('Or, 20%.')
+                elif score == 4:
+                    print('Or, 26.66%.')
+                elif score == 5:
+                    print('Or, 33.33%.')
+                elif score == 6:
+                    print('Or, 40%.')
+                elif score == 7:
+                    print('Or, 46.66%.')
+                elif score == 8:
+                    print('Or, 53.33%.')
+                elif score == 9:
+                    print('Or, 60%.')
+                elif score == 10:
+                    print('Or, 66.66%.')
+                elif score == 11:
+                    print('Or, 73.33%.')
+                elif score == 12:
+                    print('Or, 80%.')
+                elif score == 13:
+                    print('Or, 86.66%.')
+                elif score == 14:
+                    print('Or, 93.33%.')
+                elif score == 15:
+                    print('Or, 100%.')
+                elif score > 15:
+                    print(c.red + 'Sorry, but you must have cheated, or pushed the buttons more than once per question.')
+                
+                print(c.green + '''
+Thanks for taking the quiz!''')
+                t.sleep(2)
+                print(c.clear)
+                mainmenu()
 
    
 
