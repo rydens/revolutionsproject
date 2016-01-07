@@ -527,7 +527,7 @@ D: 1689-1699''')
                 t.sleep(1)
                 print(c.green + '''
                 
-Yay! You finished the quiz. Your score is ''' + score + '/15.)
+Yay! You finished the quiz. Your score is ''' + score + '/15.')
                 if score == 0:
                     print('Or, 0%.')
                 elif score == 1:
