@@ -847,7 +847,7 @@ Remember - type "clear" to clean the screen when you are done!
     - The Metric system of measurement: created by Napoleon, and used almost everywhere today.''')
 
             elif learn == 'quiz':
-               print(c.green + 'To start the Quiz game, please restart the program by typing "exit" then "./project", then start the quiz with "quiz".')
+               print(c.green + 'To start the Quiz game, please restart the program by typing "exit" then "./start", then start the quiz with "quiz".')
 
             elif learn == 'sources':
                print(c.green + 'My sources:')
