@@ -29,3 +29,6 @@ from the main menu.
 
 ## Links
 [Raspberry Pi Kit](http://www.canakit.com/raspberry-pi-starter-ultimate-kit.html)
+
+##Notes
+
